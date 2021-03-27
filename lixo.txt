@@ -1,0 +1,39 @@
+            /* //creating the main div
+            let divCar = $("<div />");
+            divCar.attr({
+                id: `car${result[i]['id']}`,
+                class: 'card',
+                style: "width: 18rem"
+            })
+
+            //creating a img
+
+            let imgCar = $('<img />')
+            imgCar.attr({
+                src: result[i]['url_foto'],
+                class: 'card-img-top', 
+            })
+            divCar.append(imgCar);
+
+            //creating text div card
+            let divText = $("<div />")
+            divText.attr({
+                class: "card-body"
+            })
+            divCar.append(divText)
+
+            //creating a text
+            let p1Car = `<p id="model${result[i]['id']}">${result[i]['modelo']}`
+            let p2Car = `<p id="price${result[i]['id']}">R$${result[i]['preco']},00` 
+            let p3Car = `<p id="photo${result[i]['id']}"`;           
+            divText.append(p1Car);
+            divText.append(p2Car);
+            divText.append(p3Car);
+
+            //creating button
+            let buttonCar = `<button class="btn btn-primary" id="${result[i]['id']}">Editar veículo</button>`
+            divCar.append(buttonCar);
+            $('.carrosMod').append(divCar); */
+
+
+            

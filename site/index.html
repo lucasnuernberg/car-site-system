@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBÇA AUTOMÓVEIS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    
+</head>
+
+<body>
+    <div id="primeira-pag">
+        <header id="interface">
+            <img src="imagens/4675fd7a543c01c7.png" alt="Logo do Kbça">
+        </header>
+        
+        
+        <figure class="cabeca">
+            
+            <img style="margin-top: .5rem;" src="imagens/png_car.png">
+            
+            <img src="imagens/pai.png" id="img-pai" onclick="trocar()" ondblclick="trocarDnv()">
+            
+            <img id="linkar-wpp" src="imagens/png_carro2.png">                              
+            
+        </figure>
+        
+        <section id="estoque">
+            
+            <h2 id="ultimo">Estoque disponível</h2>      
+            
+            <div class="carros" id="Tcarros">
+                <!-- Here is where all the car content stay -->
+            </div>  
+            
+            
+        </section>
+        
+        
+        <footer>
+            <p><a href="https://www.kbcaautomoveis.com.br" target="_blank">SITE OFICIAL/</a>
+                <a href="https://www.instagram.com/Kbca_automoveis/" target="_blank"> <img style="width: 50px;" src="imagens/logoI.png" alt=""></a>
+            </p>
+            <a href="../sistema/index.php">Acessar Sistema</a>
+
+            </footer>
+            
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="script/carData.js"></script>
+        <script src="script/codigo.js"></script>
+
+        <script src="../sistema/codigos/mostrarCars.js"></script>
+            </body>
+            </html>
