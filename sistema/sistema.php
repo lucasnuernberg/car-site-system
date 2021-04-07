@@ -10,12 +10,12 @@
 </head>
 <body>
     <div class="container">
-        <h1><span>KBÇA AUTOMÓVEIS</span></h1>
+        <h1 class="text-center"><span>KBÇA AUTOMÓVEIS</span></h1>
 
         <div class="buttons-area">    
-            <button class="btn btn-light"> <a href="addCar.php">Adicionar carros</a></button>
-            <button class="btn btn-light"> <a href="delCar.php"> Deletar carros</a></button>
-            <button class="btn btn-light"> <a href="modCar.php"> Modificar carros</a></button>
+            <a href="addCar.php"><button class="btn btn-light"> Adicionar carros</button></a>
+            <a href="delCar.php"><button class="btn btn-light">  Deletar carros</button></a>
+            <a href="modCar.php"><button class="btn btn-light">  Modificar carros</button></a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

@@ -9,7 +9,7 @@
     <title>Sistema</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container text-center">
         <header>
             <h1>Sistema <span>KBÇA AUTOMÓVEIS</span></h1>
         </header>

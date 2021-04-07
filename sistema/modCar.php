@@ -13,11 +13,11 @@
 </head>
 <body>
     <div class="container">
-        <p><a href="sistema.php">Voltar</a></p>
+    <a style="text-decoration:none;color:white" href="sistema.php"><button type="button" class="btn btn-dark">Voltar</button></a>
         <header>
-            <h1>Modificando Carros</h1>
+            <h1 class="text-center">Modificando Carros</h1>
         </header>
-        <div class="carrosMod">
+        <div class="carrosMod d-flex justify-content-center flex-wrap" style="margin-bottom: 1rem">
 
         </div>
     

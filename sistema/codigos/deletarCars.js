@@ -24,30 +24,33 @@ $(document).ready(function(){
         }
 
         //ao clicar no botão de excluir é executada a função
-        $('button').click(function(){
-
-            var confirmar = window.confirm('Você tem certeza que quer deletar esse carro?')
-            if (confirmar == true) {
-                var idDelete = $(this).attr('id');    
-    
-                $.ajax({
-                    url: 'http://localhost/projeto-site/sistema/db/deletarCar.php',
-                    data: {'id': idDelete},
-                    method: 'POST',
-                    type: 'post',
-                    dataType: 'json',
-                    success: function (response) {
-                        console.log(response)
-                        $(`#card${idDelete}`).remove()                      
-                        
-                    },
-                    error: function (xhr, ajaxOptions, thrownError) {
-                        window.alert('Erro ao deletar carro, consulte o console')
-                        console.log(xhr, ajaxOptions, thrownError)
-                    }    
-                })
-            }            
+        $('button').click(function(){            
+            var idDelete = $(this).attr('id');    
+            
+            if(idDelete=='back'){}else{
+                var confirmar = window.confirm('Você tem certeza que quer deletar esse carro?')
+                if (confirmar == true) {
+        
+                    $.ajax({
+                        url: 'http://localhost/projeto-site/sistema/db/deletarCar.php',
+                        data: {'id': idDelete},
+                        method: 'POST',
+                        type: 'post',
+                        dataType: 'json',
+                        success: function (response) {
+                            console.log(response)
+                            $(`#card${idDelete}`).remove()                      
+                            
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            window.alert('Erro ao deletar carro, consulte o console')
+                            console.log(xhr, ajaxOptions, thrownError)
+                        }    
+                    })
+                }            
+            }
         })
+        
 
     }).fail(function(err){
         window.alert('Erro ao carregar carros, consulte o console')

@@ -11,24 +11,22 @@
 </head>
 <body>
     <div class="container">
-        <p><a href="sistema.php">Voltar</a></p>
+        <a style="text-decoration:none" href="sistema.php"><button type="button" class="btn btn-light">Voltar</button></a>
         <header>
-            <h1>Adicionando Carros</h1>
+            <h1 class="text-center">Adicionando Carros</h1>
         </header>
-        <form id="addForm">
+        <form id="addForm" class="text-center">
             
-            <input type="text" name="modelo" id="modeloId" placeholder="modelo do carro" required><br>
-            <input type="number" name="preco" id="precoId" placeholder="preço" required><br>
-            <input type="text" name="descricao" id="descricaoId" placeholder="descrição" required><br>
-            <input type="text" name="foto" id="url_fotoId" placeholder="endereço da imagem" required><br>
+            <input type="text" class="m-2" name="modelo" id="modeloId" placeholder="modelo do carro" required><br>
+            <input type="number" class="m-2" name="preco" id="precoId" placeholder="preço" required><br>
+            <input type="text" class="m-2" name="descricao" id="descricaoId" placeholder="descrição" required><br>
+            <input type="text" class="m-2" name="foto" id="url_fotoId" placeholder="endereço da imagem" required><br>
             
-            <input type="submit" form="addForm" value="Adicionar carro">            
+            <input class="m-2 btn btn-primary" type="submit" form="addForm" value="Adicionar carro">            
+            <p class="m-5"><a class="text-decoration-none text-light" href="../site/index.html">Acessar site</a></p>
         </form>
 
-        <div class="showCars">
-            
-        </div>
-        <a href="../site/index.php">Acessar site</a>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

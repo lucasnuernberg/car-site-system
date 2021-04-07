@@ -13,6 +13,7 @@ $(document).ready(function(){
                 <img src="${result[i]['url_foto']}" class="card-img-top">
                 <div class="card-body">
                     <p id="model${result[i]['id']}">${result[i]['modelo']}</p>
+                    <p id="descript${result[i]['id']}">${result[i]['descricao']}</p>
                     <p id="price${result[i]['id']}">R$${result[i]['preco']},00</p>                    
                 </div>
                 <button class="btn btn-primary" id="${result[i]['id']}">Editar veículo</button>
@@ -29,8 +30,10 @@ $(document).ready(function(){
             let content = $(`#car${idCar} .card-body p`);
 
             let modelo = content[0].textContent;
-            let preco = content[1].textContent;
-            let foto = $(`#car${idCar}`).children()[0].currentSrc;  
+            //let preco = content[1].textContent;
+            let foto = $(`#car${idCar}`).children()[0].currentSrc;
+            let descricao = content[1].textContent;
+            
             
             $(`button#${idCar}`).remove();
             
@@ -40,13 +43,14 @@ $(document).ready(function(){
             
 
             contentLocal.append(`<input type="text" placeholder="modelo" value"" id='inputModelCars${idCar}'>`)
+            contentLocal.append(`<input type="text" placeholder="descrição" value"" id='inputDescriptCars${idCar}'>`)
             contentLocal.append(`<input type="number" placeholder="preço" id='inputPriceCars${idCar}'>`)
             contentLocal.append(`<input type="text" placeholder="Endereço da imagem" id='inputPhotoCars${idCar}'>`)
             
 
             $(`#inputModelCars${idCar}`).val(modelo)
-            //$(`#inputDescriptionCars${idCar}`).val('Lucas')
-            $(`#inputPriceCars${idCar}`).val(preco)
+            $(`#inputDescriptCars${idCar}`).val(descricao)
+            //$(`#inputPriceCars${idCar}`).val(preco)
             $(`#inputPhotoCars${idCar}`).val(foto)
 
             //
@@ -57,11 +61,18 @@ $(document).ready(function(){
                 let inputModel = $(`#inputModelCars${idCar}`);
                 let inputPrice = $(`#inputPriceCars${idCar}`);
                 let inputUrl = $(`#inputPhotoCars${idCar}`);
+                let inputDescript = $(`#inputDescriptCars${idCar}`);                
+                
                 if (inputModel.val() != '' && inputPrice.val() != '' && inputUrl.val() != '') {  
                     
                     $.ajax({
                         url: 'http://localhost/projeto-site/sistema/db/modificarCar.php',
-                        data: {modelo: inputModel.val(), preco: inputPrice.val(), foto: inputUrl.val(), id: idCar},
+                        data: 
+                        {modelo: inputModel.val(),
+                        preco: inputPrice.val(),
+                        foto: inputUrl.val(),
+                        id: idCar,
+                        descricao: inputDescript.val()},
                         method: 'POST',
                         type: 'post',
                         dataType: 'json'
@@ -74,6 +85,7 @@ $(document).ready(function(){
                         apagar.innerHTML = `
                         <div class="card-body">
                             <p id="model${idCar}">${inputModel.val()}</p>
+                            <p id="descript${idCar}">${inputDescript.val()}</p>
                             <p id="price16">R$${inputPrice.val()},00</p>
                         </div>
                         <button class="btn btn-primary" id="${idCar}">Veículo editado</button>

@@ -11,21 +11,13 @@
 
 body {    
     background-color:rgba(255, 255, 255, 0.938);
-    font-size: 1.6rem;
-    
+    font-size: 1.6rem; 
     
 }
 
-div#img img {
-    display: flex;
-    position: absolute;
-    width: 5rem;
-    right: 1rem;
-    bottom: 1rem;
-}
 
 #primeira-pag {
-    width: 100%;  
+    width: 100vw;  
     height: 100%;
     background-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);    
@@ -47,8 +39,8 @@ header#interface {
 
 header#interface img {
     margin-top: .5rem;
-    width: 17rem;
-    height: 10rem;
+    width: 10rem;
+    
 }
 
 header#interface div.num h3 {   
@@ -86,62 +78,20 @@ figure.cabeca img {
 }
 
 
-/* Configuração do menu de navegação*/
-
-nav#menu {
-    position: absolute;
-    top: 135px;
-    right: 10px;
-    display: none;
-}
-
-nav#menu ul {
-    text-transform: uppercase;
-}
-
-nav#menu li {
-   display: inline;
-   background-color: rgb(12, 12, 12);   
-   padding: 0.3rem .5rem .7rem .5rem;
-   border-radius: 1rem;
-   
-}
-
-nav h1 {
-    display: none;
-}
-
-a {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-    text-decoration: none;
-    transition: color 0.7s;
-    font-size: 1.9rem;
-    vertical-align: middle;
-    
-}
-nav#menu a:hover {
-    color: red
-}
-
-
-
 /* Aqui começa o estoque disponível para baixo*/
 
 section#estoque {
     width: 80%;
-    margin: auto;
-    
-    
-        
+    margin: auto;      
 }
 
 section#estoque h2#ultimo {
     text-align: center;
-    background-color: red;
-    border: 1px solid black;
-    border-radius: 1rem;
-    font-size: 1.9rem;
+    font-size: 3.9rem;
+    text-shadow: 3px 2px 1px black;
+    color: rgb(37, 37, 37);
+    margin-bottom: 2rem;
+
     
 }
 
@@ -159,8 +109,15 @@ section#estoque div.car {
 
 
 section#estoque div.carros p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: black;
+}
+section#estoque div.carros p strong {
+    font-size: 1.4rem;
+}
+
+section#estoque div.carros p span {
+    color: white;
 }
 
 section#estoque div.carros p span {
@@ -168,7 +125,7 @@ section#estoque div.carros p span {
 }
 
 section#estoque div.carros img {
-       width: 15rem;
+       width: 16rem;
        border-radius: 10%;
        cursor: pointer;
 }
@@ -191,7 +148,7 @@ section#estoque button {
     background-color: rgb(219, 35, 35);
     border-radius: 20rem;
     cursor: pointer;
-    transition: color .5s;
+    transition: color;
     
 }
 
@@ -199,7 +156,7 @@ section#estoque button {
 
 section#estoque button:hover {
     color: rgb(255, 255, 255);
-    background-color: rgb(49, 47, 47);
+    background-color: rgb(143, 7, 7);
 }
 
 
@@ -243,6 +200,7 @@ footer p {
     /*cabeça*/
     div#primeira-pag header#interface img {
         width: 300px;
+        height: 150px;
         margin-left: 50px;
         
     }

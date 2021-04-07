@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var carPlace = $('#Tcarros');
+    
 
     $.ajax({
         url: 'http://localhost/projeto-site/sistema/db/pegarCars.php',
@@ -23,17 +23,16 @@ $(document).ready(function(){
             })
             divCar.append(imgCar);
             //creating a text
-            let p1Car = `<p>${result[i]['modelo']}<p/>`
-            let p2Car = `<p>R$${result[i]['preco']},00<p/>`            
+            let p1Car = `<p><strong>${result[i]['modelo']}`
+            let p2Car = `<p>R$${result[i]['preco']},00`
+            let p3Car = `<p><span>${result[i]['descricao']}`
             divCar.append(p1Car);
             divCar.append(p2Car);
+            divCar.append(p3Car);
             //creating button
-            let buttonCar = `<button onclick="takeData(${i})">Saiba mais</button><br>`
+            let buttonCar = `<button class="btn btn-success" onclick="takeData(${i})">Saiba mais</button><br>`
             divCar.append(buttonCar);
-            
 
-
-            
             $('#Tcarros').append(divCar);
 
         }

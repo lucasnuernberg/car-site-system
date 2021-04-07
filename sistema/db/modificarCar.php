@@ -9,12 +9,13 @@ $id = $_POST['id'];
 $modelo = $_POST['modelo'];
 $preco = $_POST['preco'];
 $url_foto = $_POST['foto'];
+$descricao = $_POST['descricao'];
 
 $data = [
     'id'=> $id,
     'modelo'=> $modelo,
     'preco'=> $preco,
-    'descricao'=> '',
+    'descricao'=> $descricao,
     'url_foto'=> $url_foto
 ];
 
