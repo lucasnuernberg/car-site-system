@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     
 
@@ -6,8 +7,9 @@ $(document).ready(function(){
         method: 'GET',
         type: 'get',
         dataType: 'json'
-    }).done(function(result){
-
+    }).done(function inserir(result){
+        var carros = result;
+        
         for(let i = 0; result.length > i; i++) {
             //creating a div
             let divCar = $("<div />");
@@ -34,10 +36,20 @@ $(document).ready(function(){
             divCar.append(buttonCar);
 
             $('#Tcarros').append(divCar);
-
         }
-
         
+        var urlRequest = "http://localhost/projeto-site/sistema/db/results.json";
+        var request = new XMLHttpRequest();
+        
+        (async ()=>{
+            request.open('GET', urlRequest);
+            request.responseType = 'json';
+            request.send();
+            request.onload = ()=>{
+                var carros =  request.response;
+                console.log()
+            }
+        })()
         
 
     }).fail(function(err){

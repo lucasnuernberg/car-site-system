@@ -18,7 +18,8 @@ $data = [
     'url_foto'=> $url_foto
 ];
 
-echo json_encode('Bom dia');
+
+
 
 $sql = 'INSERT INTO carros SET modelo=:modelo, preco=:preco, descricao=:descricao, url_foto=:url_foto';
 

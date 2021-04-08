@@ -6,7 +6,7 @@
     <title>KBÇA AUTOMÓVEIS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/estilo.css">
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    
     
 </head>
 
@@ -26,13 +26,16 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                       <li class="nav-item" id="home">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page">Home</a>
                       </li>
                       <li class="nav-item" id="sobre">
-                        <a class="nav-link" aria-current="page" href="#">Sobre</a>
+                        <a class="nav-link" aria-current="page">Sobre</a>
                       </li>
                       <li class="nav-item" id="contato">
-                        <a class="nav-link" href="#">Contato</a>
+                        <a class="nav-link">Contato</a>
+                      </li>
+                      <li class="nav-item" id="loc">
+                        <a class="nav-link">Localização</a>
                       </li>
 
                     </ul>
@@ -46,6 +49,16 @@
             <!-- Banner -->            
         </figure>
         </div>
+        <div class="dropdown d-flex justify-content-end m-4">
+          <button class="btn btn-secondary dropdown-toggle btn btn-danger" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Filtrar
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" >Maiores preços</a></li>
+            <li><a class="dropdown-item" >Another action</a></li>
+            <li><a class="dropdown-item" >Something else here</a></li>
+          </ul>
+        </div>
         <div class="content">
           <section id="estoque" class="h1">
 
@@ -58,6 +71,7 @@
               
           </section>
         </div>
+        <div class="d-flex fixed-bottom m-4" style="width: 50px;"><a href="https://api.whatsapp.com/send?phone=5548996683033&text=Bom%20dia%20Lucas" target="_blank" rel="noopener noreferrer"><img src="imagens/whats.png" alt="" style="width: 50px; cursor: pointer;"></a></div>
         
         <footer>
             <p>

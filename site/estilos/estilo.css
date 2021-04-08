@@ -15,6 +15,10 @@ body {
     
 }
 
+a {
+    cursor: pointer;
+}
+
 
 #primeira-pag {
     width: 100vw;  
