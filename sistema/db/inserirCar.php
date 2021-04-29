@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json');
 
-$conexao = new PDO('mysql:host=localhost;dbname=sistema_kbca', 'root', '');
+require_once "conexao.php";
 
 
 $modelo = $_POST['modelo'];
@@ -19,7 +19,7 @@ $data = [
 ];
 
 
-
+echo json_encode("Bom dia");
 
 $sql = 'INSERT INTO carros SET modelo=:modelo, preco=:preco, descricao=:descricao, url_foto=:url_foto';
 

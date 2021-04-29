@@ -9,7 +9,7 @@ var linkImg = localStorage.getItem('img_car');
 var descript = localStorage.getItem('descript_car');
 
 
-nameElement.text(nameCar)
-descriptElement.text(descript)
-valueElement.text(valueCar)
-imgElement.attr('src', `${linkImg}`)
+nameElement.text(nameCar);
+descriptElement.text(descript);
+valueElement.text(valueCar);
+imgElement.attr('src', `${linkImg}`);

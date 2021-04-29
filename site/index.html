@@ -48,18 +48,19 @@
         <figure class="cabeca">         
             <!-- Banner -->            
         </figure>
-        </div>
-        <div class="dropdown d-flex justify-content-end m-4">
-          <button class="btn btn-secondary dropdown-toggle btn btn-danger" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Filtrar
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" >Maiores preços</a></li>
-            <li><a class="dropdown-item" >Another action</a></li>
-            <li><a class="dropdown-item" >Something else here</a></li>
-          </ul>
+
         </div>
         <div class="content">
+          <div class="dropdown d-flex justify-content-end m-4">
+            <button class="btn btn-secondary dropdown-toggle btn btn-danger" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Filtrar
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" >Maiores preços</a></li>
+              <li><a class="dropdown-item" >Another action</a></li>
+              <li><a class="dropdown-item" >Something else here</a></li>
+            </ul>
+          </div>
           <section id="estoque" class="h1">
 
               
@@ -92,5 +93,9 @@
         <script src="script/carData.js"></script>
         <script src="script/codigo.js"></script>
         <script src="../sistema/codigos/mostrarCars.js"></script>
+        <script>
+          localStorage.setItem("path", "http://localhost/projeto-site")
+        </script>
+        
   </body>
 </html>

@@ -1,8 +1,9 @@
 
 $(document).ready(function(){     
     //Ajax usando metodo get para pegar os dados dos carros 
+    var caminho = localStorage.getItem("path");
     $.ajax({
-        url: 'http://localhost/projeto-site/sistema/db/pegarCars.php',
+        url: `${caminho}/sistema/db/pegarCars.php`,
         method: 'GET',
         type: 'get',
         dataType: 'json'
@@ -32,7 +33,7 @@ $(document).ready(function(){
                 if (confirmar == true) {
         
                     $.ajax({
-                        url: 'http://localhost/projeto-site/sistema/db/deletarCar.php',
+                        url: `${caminho}/sistema/db/deletarCar.php`,
                         data: {'id': idDelete},
                         method: 'POST',
                         type: 'post',

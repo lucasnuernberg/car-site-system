@@ -1,47 +1,51 @@
 $(document).ready(function(){
-    var urlReq = "http://localhost/projeto-site/sistema/db/results.json";
-    var request = new XMLHttpRequest();
-    request.open('GET', urlReq);
-    request.responseType = 'json'
-    request.send();
-    request.onload = function(){
-        var carData = request.response;
-        
-        var selectElement = $('#carsSelect');
-        for(let i = 0; carData.length > i; i++){
-            selectElement.append(`<option value="${carData[i].id}">${carData[i].modelo}</option>`);
-        }  
-        
-    }
-}
-)
-$("#subtmitBtn").click(function(e){
-    e.preventDefault();
-    var nodeList = $("input");
-    var inputElements = [...nodeList];
+    var caminho = localStorage.getItem("path");
     
-    var inputsVal = inputElements.map(function(element){return element.value});    
-    var idCarSelected = $("#carsSelect option:selected").val(); 
-    var textAreaVal = $("textarea#textContent").val()
+    $("#subtmitBtn").click(function(e){        
+        e.preventDefault();
 
-    var proposta = {
-        inputs: inputsVal,
-        idCar: idCarSelected,
-        textArea: textAreaVal
-    }
+        var validar = true;
+        var nodeList = $("input");
+        var inputElements = [...nodeList];
 
-    $.ajax({
-        url: "http://localhost/projeto-site/sistema/db/proposta.php",
-        data: {content: JSON.stringify(proposta)},
-        dataType: "json",
-        method: "POST",
-        type: "post",
+        
+        var inputsVal = inputElements.map(function(element){return element.value});    
+        var idCarSelected = $("#carsSelect option:selected").val();
+        var textAreaVal = $("textarea#textContent").val()
 
-    }).done(function(result){
-        console.log(result);
-    }).fail(function(error){
-        console.log(error)
+        inputsVal.forEach(
+            function verifica(item, index) {
+                if (item == "") {
+                    validar = false
+                }
+            }
+        )
+
+        var proposta = {
+            inputs: inputsVal,
+            idCar: idCarSelected,
+            textArea: textAreaVal
+        }
+
+        if (validar) {
+            console.log("Adiciona");
+            $.ajax({
+                url: `${caminho}/sistema/db/proposta.php`,
+                data: {content: JSON.stringify(proposta)},
+                dataType: "json",
+                method: "POST",
+                type: "post",
+    
+            }).done(function(result){
+                console.log(result);
+            }).fail(function(error){
+                console.log(error)
+            })
+
+            
+        }
+
+
+        
     })
-
-    
 })

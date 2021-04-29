@@ -3,7 +3,7 @@
 header('Content-Type: application/json');
 
 
-$conexao = new PDO('mysql:host=localhost;dbname=sistema_kbca', 'root', '');
+require_once "conexao.php";
 
 $id = $_POST['id'];
 $modelo = $_POST['modelo'];

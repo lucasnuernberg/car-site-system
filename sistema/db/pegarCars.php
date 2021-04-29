@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json');
 
-$conexao = new PDO('mysql:host=localhost;dbname=sistema_kbca', 'root', '');
+require_once "conexao.php";
 
 $sql = 'SELECT * FROM carros';
 

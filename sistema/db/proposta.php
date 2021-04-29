@@ -1,8 +1,8 @@
 <?php
 
+require_once "conexao.php";
 header('Content-Type: application/json');
 
-$pdo = new PDO("mysql:host=localhost;dbname=sistema_kbca", "root", "");
 
 $sql = 'INSERT INTO propostas SET nome=:nome, email=:email, celular_num=:num_cel, proposta=:preco_prop,
 id_car=:id_car, detalhe=:detalhe';
@@ -22,4 +22,6 @@ $inserir = [
 
 echo json_encode("oi");
 
-$status = $pdo->prepare($sql)->execute($inserir);
+if (true) {
+    $status = $conexao->prepare($sql)->execute($inserir);
+}

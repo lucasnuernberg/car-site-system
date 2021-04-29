@@ -1,5 +1,6 @@
 $('#addForm').submit(function(e){
     e.preventDefault();
+    var caminho = localStorage.getItem("path"); 
     
     var carModel = $('#modeloId').val();
     var carPrice = $('#precoId').val();
@@ -7,7 +8,7 @@ $('#addForm').submit(function(e){
     var carPhoto = $('#url_fotoId').val();
 
     $.ajax({
-        url: 'http://localhost/projeto-site/sistema/db/inserirCar.php',
+        url: `${caminho}/sistema/db/inserirCar.php`,
         data: {modelo: carModel, preco: carPrice, descricao: carDescription, url_foto: carPhoto},
         dataType: 'json',
         method: 'POST',

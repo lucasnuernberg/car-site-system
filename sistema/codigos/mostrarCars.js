@@ -1,9 +1,9 @@
 
 $(document).ready(function(){
-    
+    var caminho = localStorage.getItem("path"); 
 
     $.ajax({
-        url: 'http://localhost/projeto-site/sistema/db/pegarCars.php',
+        url: `${caminho}/sistema/db/pegarCars.php`,
         method: 'GET',
         type: 'get',
         dataType: 'json'

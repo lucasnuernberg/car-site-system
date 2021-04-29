@@ -1,7 +1,8 @@
 $(document).ready(function(){
     //Ajax com metodo get para mostrar todos os carros
+    var caminho = localStorage.getItem("path"); 
     $.ajax({
-        url: 'http://localhost/projeto-site/sistema/db/pegarCars.php',
+        url: `${caminho}/sistema/db/pegarCars.php`,
         method: 'GET',
         type: 'get',
         dataType: 'json'
@@ -66,7 +67,7 @@ $(document).ready(function(){
                 if (inputModel.val() != '' && inputPrice.val() != '' && inputUrl.val() != '') {  
                     
                     $.ajax({
-                        url: 'http://localhost/projeto-site/sistema/db/modificarCar.php',
+                        url: `${caminho}/sistema/db/modificarCar.php`,
                         data: 
                         {modelo: inputModel.val(),
                         preco: inputPrice.val(),
