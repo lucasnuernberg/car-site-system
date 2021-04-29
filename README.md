@@ -2,15 +2,15 @@
 
  ## Sistema para inserir, deletar e atualizar carros no site
 
- ![Sistema](https://github.com/lucasnuernberg/car-system/blob/main/img/sistema.png)
+ ![Sistema](https://github.com/lucasnuernberg/car-site-system/blob/master/c.png)
 
  ## Site com banco de dados
 
- ![edit](https://github.com/lucasnuernberg/car-system/blob/main/img/main.png)
+ ![edit](https://github.com/lucasnuernberg/car-site-system/blob/master/a.png)
 
   ## Parte de edição dos carros
 
- ![site](https://github.com/lucasnuernberg/car-system/blob/main/img/edit.png)
+ ![site](https://github.com/lucasnuernberg/car-site-system/blob/master/b.png)
 
  ## Tecnologias usadas
 
