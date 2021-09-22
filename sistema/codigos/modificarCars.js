@@ -77,9 +77,7 @@ $(document).ready(function(){
                         method: 'POST',
                         type: 'post',
                         dataType: 'json'
-                    }).done(function(result){
-                        console.log(result)
-                       
+                    }).done(function(result){                       
                         $(`#car${idCar} img`)[0].src = inputUrl.val()
 
                         var apagar = $(`div#car${idCar} div`)[0]

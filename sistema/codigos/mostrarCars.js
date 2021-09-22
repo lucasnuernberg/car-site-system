@@ -7,9 +7,7 @@ $(document).ready(function(){
         method: 'GET',
         type: 'get',
         dataType: 'json'
-    }).done(function inserir(result){
-        var carros = result;
-        
+    }).done(function inserir(result){        
         for(let i = 0; result.length > i; i++) {
             //creating a div
             let divCar = $("<div />");
@@ -47,13 +45,12 @@ $(document).ready(function(){
             request.send();
             request.onload = ()=>{
                 var carros =  request.response;
-                console.log()
+                console.log();
             }
         })()
         
 
     }).fail(function(err){
-
         console.log(err);
     })
 })

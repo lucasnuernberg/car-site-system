@@ -4,7 +4,6 @@ var sectionElement = $('#estoque');
 function takeData(id) {
     
     var id = `car${id}`;
-    console.log($(`#${id} p`))
     let imgCar = $(`#${id} img`)[0].src;
     let nameCar = $(`#${id} p`)[0].textContent;
     let valueCar = $(`#${id} p`)[2].textContent;

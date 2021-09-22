@@ -18,14 +18,27 @@
             <input type="text" name="login" id="login" placeholder='login' required><br>
             <input type="password" name="senha" autocomplete="off" id="senha" placeholder='senha' required><br>
             <button id="verificar" type="submit">Entrar</button>
-            <p id="resposta"></p>
+
+            <?php
+
+                if (isset( $_POST['login'])) {
+                    $login = $_POST['login'];
+                    $senha = $_POST['senha'];
+                    if ($login == 'quilunhas' && $senha == '1234') {
+                        header('Status: 301 Moved Permanently', false, 301);
+                        header('Location: http://localhost/projeto-site/sistema/sistema.php');
+                    } else {
+                        echo "<p style='color: white;'>Senha ou Login inválidos</p>";
+                    }
+                }
+
+            ?>
             
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="codigos/validando.js"></script>
     <script>
         localStorage.setItem("path", "http://localhost/projeto-site")
     </script>
 </body>
-</html>
+</html>     

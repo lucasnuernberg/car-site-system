@@ -2,12 +2,10 @@
 .container {
     width: 100vw;
     height: 100vh;    
-    
     border-radius: 45px;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 1px black;
     padding: 1rem;
-    background-color: rgb(53, 53, 53);
-    
+    background-color: rgb(148, 148, 148);    
 }
 
 .container header {
@@ -20,7 +18,7 @@
 }
 
 .container h1 {
-    color: aliceblue;
+    color: rgb(90, 99, 107);
 }
 
 input#senha {
@@ -46,7 +44,7 @@ button a {
 @media(max-width: 537px) {
     .container .buttons-area {
         display: grid;
-    }  
+    }
 }
 
 

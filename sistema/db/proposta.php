@@ -4,8 +4,12 @@ require_once "conexao.php";
 header('Content-Type: application/json');
 
 
-$sql = 'INSERT INTO propostas SET nome=:nome, email=:email, celular_num=:num_cel, proposta=:preco_prop,
-id_car=:id_car, detalhe=:detalhe';
+$sql = 'INSERT INTO propostas
+        SET nome=:nome, email=:email,
+        celular_num=:num_cel,
+        proposta=:preco_prop,
+        id_car=:id_car,
+         detalhe=:detalhe';
 
 $proposta = $_POST['content'];
 
@@ -20,8 +24,10 @@ $inserir = [
     "detalhe" => "",
 ];
 
-echo json_encode("oi");
+echo json_encode(".");
 
 if (true) {
     $status = $conexao->prepare($sql)->execute($inserir);
 }
+
+?>

@@ -4,7 +4,9 @@ header('Content-Type: application/json');
 
 require_once "conexao.php";
 
-$sql = 'SELECT * FROM carros';
+$sql = 'SELECT modelo, preco, url_foto
+from carros
+ORDER BY preco';
 
 $status = $conexao->prepare($sql);
 $status->execute();
@@ -12,14 +14,10 @@ $status->execute();
 $dados = $status->fetchAll(PDO::FETCH_ASSOC);
 
 if ($status->rowCount() > 0) {
-    echo json_encode($dados);
-    $fp = fopen('results.json', 'w');
-    fwrite($fp, json_encode($dados));
-    fclose($fp); 
+    echo json_encode($dados); 
 
 } else {
     echo json_encode('Não existem carros');
 }
 
 ?>
-

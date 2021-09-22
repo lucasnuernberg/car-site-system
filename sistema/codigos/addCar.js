@@ -5,11 +5,11 @@ $('#addForm').submit(function(e){
     var carModel = $('#modeloId').val();
     var carPrice = $('#precoId').val();
     var carDescription = $('#descricaoId').val();
-    var carPhoto = $('#url_fotoId').val();
+    var carPhoto = $('#arquivoFoto')
 
     $.ajax({
         url: `${caminho}/sistema/db/inserirCar.php`,
-        data: {modelo: carModel, preco: carPrice, descricao: carDescription, url_foto: carPhoto},
+        data: {modelo: carModel, preco: carPrice, descricao: carDescription},
         dataType: 'json',
         method: 'POST',
         type: 'post'

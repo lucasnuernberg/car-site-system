@@ -1,14 +1,12 @@
 <?php
 
 require_once "conexao.php";
-header('Content-Type: application/json');
 
+header('Content-Type: application/json');
 
 $id = $_POST['id'];
 
 echo json_encode($id);
-
-
 
 $data = [
     'id' => $id

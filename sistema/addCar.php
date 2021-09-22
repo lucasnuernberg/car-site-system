@@ -15,14 +15,14 @@
         <header>
             <h1 class="text-center">Adicionando Carros</h1>
         </header>
-        <form id="addForm" class="text-center">
+
+        <form id="addForm" class="text-center" enctype="multipart/form-data">
             
             <input type="text" class="m-2" name="modelo" id="modeloId" placeholder="modelo do carro" required><br>
             <input type="number" class="m-2" name="preco" id="precoId" placeholder="preço" required><br>
             <input type="text" class="m-2" name="descricao" id="descricaoId" placeholder="descrição" required><br>
-            <input type="text" class="m-2" name="foto" id="url_fotoId" placeholder="endereço da imagem" required><br>
-            
-            <input class="m-2 btn btn-primary" type="submit" form="addForm" value="Adicionar carro">            
+            <input type="file" class="m-2" name="arquivoFoto" id="arquivoFoto" accept="image/*">            
+            <input class="m-2 btn btn-primary" type="submit" form="addForm" value="Adicionar carro">
             <p class="m-5"><a class="text-decoration-none text-light" href="../site/index.html">Acessar site</a></p>
         </form>
 

@@ -9,7 +9,7 @@ $(document).ready(function(){
         dataType: 'json'
     }).done(function(result){   
 
-        //(result é uma lista com varios carros que são objetos)     
+        //result is a list with a lot of cars in format of object     
         for (let i = 0; result.length > i; i++){
 
             $('#showCars').prepend(`
@@ -24,7 +24,6 @@ $(document).ready(function(){
             `);
         }
 
-        //ao clicar no botão de excluir é executada a função
         $('button').click(function(){            
             var idDelete = $(this).attr('id');    
             
@@ -39,11 +38,11 @@ $(document).ready(function(){
                         type: 'post',
                         dataType: 'json',
                         success: function (response) {
-                            console.log(response)
                             $(`#card${idDelete}`).remove()                      
                             
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
+                            
                             window.alert('Erro ao deletar carro, consulte o console')
                             console.log(xhr, ajaxOptions, thrownError)
                         }    
@@ -54,8 +53,9 @@ $(document).ready(function(){
         
 
     }).fail(function(err){
-        window.alert('Erro ao carregar carros, consulte o console')
+
         console.log(err)
+        window.alert('Erro ao carregar carros, consulte o console')
     });
 
 });
