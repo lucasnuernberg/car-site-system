@@ -11,12 +11,12 @@ $(document).ready(function(){
         
         var inputsVal = inputElements.map(function(element){return element.value});    
         var idCarSelected = $("#carsSelect option:selected").val();
-        var textAreaVal = $("textarea#textContent").val()
+        var textAreaVal = $("textarea#textContent").val();
 
         inputsVal.forEach(
-            function verifica(item, index) {
+            function verifica(item) {
                 if (item == "") {
-                    validar = false
+                    validar = false;
                 }
             }
         )
@@ -39,10 +39,8 @@ $(document).ready(function(){
             }).done(function(result){
                 console.log(result);
             }).fail(function(error){
-                console.log(error)
-            })
-
-            
+                console.log(error);
+            })            
         }
 
 

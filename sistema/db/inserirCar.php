@@ -29,4 +29,6 @@ $sql = 'INSERT INTO carros SET modelo=:modelo, preco=:preco, descricao=:descrica
 
 $status = $conexao->prepare($sql)->execute($data);
 
+?>
+
 

@@ -28,7 +28,7 @@ $(document).ready(function(){
             var idDelete = $(this).attr('id');    
             
             if(idDelete=='back'){}else{
-                var confirmar = window.confirm('Você tem certeza que quer deletar esse carro?')
+                var confirmar = window.confirm('Você tem certeza que quer deletar esse carro?');
                 if (confirmar == true) {
         
                     $.ajax({
@@ -38,13 +38,13 @@ $(document).ready(function(){
                         type: 'post',
                         dataType: 'json',
                         success: function (response) {
-                            $(`#card${idDelete}`).remove()                      
+                            $(`#card${idDelete}`).remove() ;                     
                             
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             
-                            window.alert('Erro ao deletar carro, consulte o console')
-                            console.log(xhr, ajaxOptions, thrownError)
+                            window.alert('Erro ao deletar carro, consulte o console');
+                            console.log(xhr, ajaxOptions, thrownError);
                         }    
                     })
                 }            
@@ -54,8 +54,8 @@ $(document).ready(function(){
 
     }).fail(function(err){
 
-        console.log(err)
-        window.alert('Erro ao carregar carros, consulte o console')
+        console.log(err);
+        window.alert('Erro ao carregar carros, consulte o console');
     });
 
 });

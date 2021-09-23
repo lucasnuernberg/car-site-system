@@ -27,13 +27,14 @@ $('li').click(function(){
             break;
         default:
             break;
-    }
+    };
 
-})
+});
 
 $('li#maiores').click(function() {
 
-
+    var limpar = $('div#Tcarros.carros');
+    limpar.html('');
     var caminho = localStorage.getItem("path");
 
     $.ajax({

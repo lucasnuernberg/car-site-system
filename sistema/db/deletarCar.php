@@ -16,4 +16,6 @@ $sql = 'DELETE FROM carros WHERE id=:id';
 
 $conexao->prepare($sql)->execute($data);
 
+?>
+
 

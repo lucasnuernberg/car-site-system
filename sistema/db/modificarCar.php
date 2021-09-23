@@ -27,4 +27,4 @@ if (1==1) {
     echo json_encode('Dados atualizados');
 
 }
-//back-end
+?>

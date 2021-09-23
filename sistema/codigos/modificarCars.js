@@ -29,34 +29,26 @@ $(document).ready(function(){
             
             var idCar = $(this).attr('id');
             let content = $(`#car${idCar} .card-body p`);
-
             let modelo = content[0].textContent;
-            //let preco = content[1].textContent;
             let foto = $(`#car${idCar}`).children()[0].currentSrc;
             let descricao = content[1].textContent;
             
             
             $(`button#${idCar}`).remove();
             
-            let contentLocal = $(`#car${idCar} .card-body`)
-                            
-            contentLocal.empty()      
-            
+            let contentLocal = $(`#car${idCar} .card-body`);                            
+            contentLocal.empty();
+            contentLocal.append(`<input type="text" placeholder="modelo" value"" id='inputModelCars${idCar}'>`);
+            contentLocal.append(`<input type="text" placeholder="descrição" value"" id='inputDescriptCars${idCar}'>`);
+            contentLocal.append(`<input type="number" placeholder="preço" id='inputPriceCars${idCar}'>`);
+            contentLocal.append(`<input type="text" placeholder="Endereço da imagem" id='inputPhotoCars${idCar}'>`);            
 
-            contentLocal.append(`<input type="text" placeholder="modelo" value"" id='inputModelCars${idCar}'>`)
-            contentLocal.append(`<input type="text" placeholder="descrição" value"" id='inputDescriptCars${idCar}'>`)
-            contentLocal.append(`<input type="number" placeholder="preço" id='inputPriceCars${idCar}'>`)
-            contentLocal.append(`<input type="text" placeholder="Endereço da imagem" id='inputPhotoCars${idCar}'>`)
-            
+            $(`#inputModelCars${idCar}`).val(modelo);
+            $(`#inputDescriptCars${idCar}`).val(descricao);
+            $(`#inputPhotoCars${idCar}`).val(foto);
 
-            $(`#inputModelCars${idCar}`).val(modelo)
-            $(`#inputDescriptCars${idCar}`).val(descricao)
-            //$(`#inputPriceCars${idCar}`).val(preco)
-            $(`#inputPhotoCars${idCar}`).val(foto)
-
-            //
             let buttonMod = `<button id="confirm${idCar}">Confirmar edição</button>`;
-            $(`#car${idCar}`).append(buttonMod)
+            $(`#car${idCar}`).append(buttonMod);
             
             $(`#confirm${idCar}`).click(function(){
                 let inputModel = $(`#inputModelCars${idCar}`);
@@ -90,9 +82,7 @@ $(document).ready(function(){
                         <button class="btn btn-primary" id="${idCar}">Veículo editado</button>
                         
                         `
-                        $(`#confirm${idCar}`).remove()
-
-
+                        $(`#confirm${idCar}`).remove();
                         
                     })
 

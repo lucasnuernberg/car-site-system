@@ -5,7 +5,7 @@ $('#addForm').submit(function(e){
     var carModel = $('#modeloId').val();
     var carPrice = $('#precoId').val();
     var carDescription = $('#descricaoId').val();
-    var carPhoto = $('#arquivoFoto')
+    var carPhoto = $('#arquivoFoto');
 
     $.ajax({
         url: `${caminho}/sistema/db/inserirCar.php`,
@@ -22,10 +22,10 @@ $('#addForm').submit(function(e){
 
     }).fail(function(err){
 
-        console.log(err)
-        window.alert('Erro ao adicionar carro, consulte o console.')
+        console.log(err);
+        window.alert('Erro ao adicionar carro, consulte o console.');
 
-    })
+    });
 
 
-})
+});
