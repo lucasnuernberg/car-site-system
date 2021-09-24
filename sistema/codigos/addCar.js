@@ -1,4 +1,4 @@
-$('#addForm').submit(function(e){
+/* $('#addForm').submit(function(e){
     e.preventDefault();
     var caminho = localStorage.getItem("path"); 
     
@@ -6,6 +6,7 @@ $('#addForm').submit(function(e){
     var carPrice = $('#precoId').val();
     var carDescription = $('#descricaoId').val();
     var carPhoto = $('#arquivoFoto');
+    console.log(carPhoto);
 
     $.ajax({
         url: `${caminho}/sistema/db/inserirCar.php`,
@@ -20,6 +21,8 @@ $('#addForm').submit(function(e){
         $('#descricaoId').val('');
         $('#url_fotoId').val('');
 
+        console.log(result);
+
     }).fail(function(err){
 
         console.log(err);
@@ -28,4 +31,4 @@ $('#addForm').submit(function(e){
     });
 
 
-});
+}); */

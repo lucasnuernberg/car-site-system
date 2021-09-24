@@ -53,8 +53,9 @@ $('li#maiores').click(function() {
             })
             //creating a img
             let imgCar = $('<img />')
+            let urlCarro = 'http://localhost/projeto-site/sistema/' + result[i]['url_foto'];
             imgCar.attr({
-                src: result[i]['url_foto'],
+                src: urlCarro,
                 onclick: `takeData(${i})`
             })
             divCar.append(imgCar);

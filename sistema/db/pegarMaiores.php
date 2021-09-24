@@ -6,7 +6,7 @@ require_once "conexao.php";
 
 $sql = 'SELECT modelo, preco, url_foto
 from carros
-ORDER BY preco';
+ORDER BY preco desc';
 
 $status = $conexao->prepare($sql);
 $status->execute();
